@@ -327,8 +327,6 @@ namespace NovaProject
         #region ctor
         public NovaOS()
         {
-            //MonitorThread = new Thread(new ThreadStart(MonitorLoop));
-            //MonitorThread.Start();
             CoolantTempSensor.ReachedOperatingTemp += CoolantTempSensor_ReachedOperatingTemp;
             CoolantTempSensor.OverTemp += CoolantTempSensor_OverTemp;
             OilTempSensor.ReachedOperatingTemp += OilTempSensor_ReachedOperatingTemp;
@@ -389,56 +387,7 @@ namespace NovaProject
         #endregion
 
         #region Private Members
-        //private void MonitorLoop()
-        //{
-        //    while (true)
-        //    {
-        //        try
-        //        {
-        //            //if (!IgnitionIsOn && IgnitionIsActivated && IgnitionActivated != null)
-        //            //{ IgnitionActivated(); IgnitionIsOn = true; }
-        //            //if (IgnitionIsOn && !IgnitionIsActivated && IgnitionDeactivated != null)
-        //            //{ IgnitionDeactivated(); IgnitionIsOn = false; }
-
-        //            //if (!EngineIsRunning && CurrentRPM > MIN_START_RPM && EngineStarted != null)
-        //            //{ EngineStarted(); EngineIsRunning = true; }
-        //            //if (EngineIsRunning && CurrentRPM < MIN_START_RPM && EngineStopped != null)
-        //            //{ EngineStopped(); EngineIsRunning = false; }
-
-        //            //if (!OilLevelOK && OilLevelIsOk && OilLevelLow != null)
-        //            //{ OilLevelLow(); OilLevelIsOk = false; }
-        //            //if (OilLevelOK && !OilLevelIsOk && OilLevelOk != null)
-        //            //{ OilLevelOk(); OilLevelIsOk = true; }
-
-        //            //if (OilPressure < MIN_OIL_PRESSURE && OilPressIsOk && OilPressureLow != null)
-        //            //{ OilPressureLow(OilPressure); OilPressIsOk = false; }
-        //            //if (OilPressure >= MIN_OIL_PRESSURE && !OilPressIsOk && OilPressureOk != null)
-        //            //{ OilPressureOk(OilPressure); OilPressIsOk = true; }
-
-        //            //if (OilTemperature > MIN_OIL_TEMP && !OilTempReached && OilOperatingTempReached != null)
-        //            //{ OilOperatingTempReached(OilTemperature); OilTempReached = true; }
-
-        //            //if (CoolantTemperature > MIN_COOLANT_TEMP && !CoolantTempReached && CoolantOperatingTempReached != null)
-        //            //{ CoolantOperatingTempReached(CoolantTemperature); CoolantTempReached = true; }
-
-        //            //if (CoolantTemperature >= MAX_COOLANT_TEMP && CoolantTempIsOk && CoolantTempHigh != null)
-        //            //{ CoolantTempHigh(CoolantTemperature); CoolantTempIsOk = false; }
-        //            //if (CoolantTemperature < MAX_COOLANT_TEMP && !CoolantTempIsOk && CoolantOperatingTempReached != null)
-        //            //{ CoolantOperatingTempReached(CoolantTemperature); CoolantTempIsOk = true; }
-
-        //            //if (OilTemperature >= MAX_OIL_TEMP && OilTempIsOk && OilTempHigh != null)
-        //            //{ OilTempHigh(CoolantTemperature); OilTempIsOk = false; }
-        //            //if (OilTemperature < MAX_OIL_TEMP && !OilTempIsOk && OilOperatingTempReached != null)
-        //            //{ OilOperatingTempReached(CoolantTemperature); OilTempIsOk = true; }
-
-        //        }
-        //        catch (Exception ex)
-        //        {
-
-        //        }
-        //        Thread.Sleep(100);
-        //    }
-        //}
+        
         private void SendWarning(Ports.Sensors.ISensor sensor)
         {
             //TODO: figure something out here.
